@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Book Now!</title>
+{% endblock %}
+
+
+{% block body %}
+<section class="book-now-section">
+    <div class="book-now-box">
+        <h2 class="book-now-text">BOOK NOW!</h2>
+    </div>
+</section>
+
+<h2 class="h2-reservation">Reservation</h2>
+
+
+<div class="checkout-container">
+    <div class="checkout-form">
+    <form action="" method="POST">
+        <div class="date-fields">
+            <!-- Check-in Date -->
+            <div class="checkout-field">
+                <label for="checkin">Check-in Date</label>
+                <input 
+                    type="date" 
+                    id="checkin" 
+                    name="checkin" 
+                    min="" 
+                     > 
+                     <!-- add required -->
+            </div>
+
+            <!-- Check-out Date -->
+            <div class="checkout-field">
+                <label for="checkout">Check-out Date</label>
+                <input 
+                    type="date" 
+                    id="checkout" 
+                    name="checkout" 
+                    >
+                    <!-- add required -->
+            </div>
+
+            <div class="checkout-field button-container">
+                <!-- <button type="submit">SEARCH</button> -->
+                 <a href="rooms"><button>SEARCH</button></a>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+{% endblock %}

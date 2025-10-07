@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+<title>Sign up</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="centered-box">
+<div class="box">
+  <div class="grid grid--2-cols-wide-right">
+    <div>
+      <h1>Sign up!</h1>
+      <form method="POST">
+        <p>Full Name</p>
+        <input name="full_name" placeholder="Username" required><br>
+        <p>Email</p>
+        <input name="email" placeholder="Email" required><br>
+        <p>Mobile Number</p>
+        <input name="mobile_number" placeholder="Mobile Number" required><br>
+        <p>Adress</p>
+        <input name="address" placeholder="Address" required><br>
+        <p>Username</p>
+        <input name="username" placeholder="Username" required><br>
+        <p>Password</p>
+        <input name="password" type="password" placeholder="Password" required><br>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>or</p>
+      <button>Facebook</button><button>Google</button>
+      
+    </div>
+    <div class="image-box">
+      <img class="login_img" src="{{ url_for('static', filename='img/login_bg.jpg') }}">
+      <h1 class="image-text">A cozy, modern hotel<br>with great service and a convenient location.</h1>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

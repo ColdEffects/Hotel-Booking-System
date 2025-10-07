@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>dashboard</title>
+<style>
+.dashboard_btn {
+    width: 100px;
+    color: blue;
+    height: 100px;
+}
+</style>
+{% endblock %}
+
+
+{% block body %}
+<div class="grid grid--2-cols-wider-right">
+    <div>
+        <p>THIS is col 1</p>
+        <a href="{{ url_for('logout') }}"><button class="dashboard_btn">Logout</button></a>
+    </div>
+    <div>
+        <p>THIS is col 2</p>
+        <p>User type in session: {{ session['user_type'] }}</p>
+        <p>current_user class: {{ current_user.__class__.__name__ }}</p>
+        <p>{{ current_user.full_name }}, {{ current_user.username }}, {{ current_user.email }}</p>
+    </div>
+</div>
+{% endblock %}
